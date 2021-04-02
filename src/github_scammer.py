@@ -13,7 +13,8 @@ def main() -> None:
     repo.create_file(
         path=f"misc/{filename}",
         message=f"Add {filename}",
-        content="\n".join(str(uuid4()) for _ in range(random.randint(1, 30)))
+        content="\n".join(str(uuid4()) for _ in range(random.randint(1, 30))),
+        branch="main",
     )
     print(f"[+] {repo.full_name} successfully updated")
 
